@@ -1,0 +1,119 @@
+.possibilities {  
+  background: url('/assets/jeshoots-com-l0j0DHVWcIE-unsplash 2.jpg') center/cover no-repeat;
+  width: 100%;
+  height: 802px;
+
+  h3 {
+    display: flex;
+    justify-content: center;
+    padding-top: 90px;
+    font-family: Dudka;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 48px;
+    line-height: 100%;
+    color: #E950A0;
+
+    span {
+      padding-left: 10px;
+      font-family: Dudka;
+      font-weight: 700;
+      font-style: Bold;
+      font-size: 48px;
+      line-height: 100%;
+      color: #FFFFFF;
+    }
+  }
+
+  .text {
+    padding-top: 250px;
+    display: flex;
+    margin: 0 auto;
+    width: 1316px;
+    p {
+      font-size: 40px;
+      font-weight: 700;
+      color: white;
+    }
+
+    h4 {
+      padding-top: 50px;
+      padding-left: 350px;
+      font-size: 34px;
+      font-weight: 400;
+      color: white;
+      position: relative;
+      display: inline-block;
+      transition: transform 0.5s ease, opacity 0.5s ease;
+    }
+    .show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .hide {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+  }
+
+  @media (max-width: 1024px) {
+    height: auto;
+    padding-bottom: 64px;
+
+    h3 {
+      font-size: 34px;
+      span {
+        font-size: 36px;
+      }
+    }
+
+    .text {
+      width: 90%;
+      padding-top: 40px;
+      p {
+        font-size: 28px;
+      }
+
+      h4 {
+        margin-top: -10px;
+        padding-left: 40px;
+        font-size: 24px;
+      }
+    }
+  }
+
+  @media (max-width: 550px) {
+    height: auto;
+    padding-bottom: 50px;
+    h3 {
+      width: 100%;
+      font-size: 26px;
+      padding-top: 40px;
+      display: flex;
+      align-items: center;
+      span {
+        font-size: 16px;
+      }
+    }
+
+    .text {
+      width: 95%;
+      padding-top: 40px;
+      flex-direction: column;
+      p {
+        font-size: 16px;
+      }
+
+      h4 {
+padding: 0;
+        font-size: 16px;
+        margin-top: 15px;
+      }
+    }
+  }
+  @media(max-width: 360px) {
+    h3{
+      font-size: 14px;
+    }
+  }
+}

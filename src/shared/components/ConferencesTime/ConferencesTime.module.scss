@@ -1,0 +1,135 @@
+.conferencestime { 
+  background: url('/assets/Frame 13 (1).jpg') center/cover no-repeat;
+  width: 100%;
+  min-height: 235px;
+
+  h2 {
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    font-family: Gotham Pro;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 32px;
+    line-height: 100%;
+    color: white;
+  }
+
+  .times {
+    margin-top: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    height: 80px;
+
+    .time {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      h4 {
+        font-family: Dudka;
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 48px;
+        line-height: 100%;
+        text-align: center;
+        color: #FFFFFF;
+      }
+
+      span {
+        font-family: Dudka;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 24px;
+        line-height: 100%;
+        color: #AAAAAA;
+      }
+    }
+
+    .diviler {
+      width: 1px;
+      height: 79.5px;
+      border: 1px solid #FFFFFF;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    h2 {
+      font-size: 28px;
+      padding-top: 30px;
+    }
+
+    .times {
+      gap: 80px;
+      height: 70px;
+
+      .time {
+        h4 {
+          font-size: 40px;
+        }
+        span {
+          font-size: 20px;
+        }
+      }
+
+      .diviler {
+        height: 70px;
+      }
+    }
+  }
+
+  @media (max-width: 550px) {
+    h2 {
+      font-size: 20px;
+      padding-top: 40px;
+    }
+
+    .times {
+        display: flex;
+      gap: 50px; 
+      height: 60px;
+      margin-top: 32px;
+
+      .time {
+        h4 {
+          font-size: 28px; 
+        }
+        span {
+          font-size: 16px; 
+        }
+      }
+
+      .diviler {
+        height: 80px;
+      }
+    }
+  }
+
+  @media (max-width: 360px) {
+    h2 {
+      font-size: 18px;
+      padding-top: 10px;
+    }
+
+    .times {
+      gap: 25px;
+      height: 50px;
+      margin-top: 15px;
+
+      .time {
+        h4 {
+          font-size: 24px;
+        }
+        span {
+          font-size: 12px;
+        }
+      }
+
+      .diviler {
+        height: 50px;
+      }
+    }
+  }
+}

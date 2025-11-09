@@ -1,0 +1,139 @@
+.Sponsors {   
+  margin: 505px auto 0 auto;
+  width: 1320px; 
+  padding: 40px 45px 80px 45px;
+  border-radius: 30px;
+  background: url('/assets/Frame 474.jpg') center/cover no-repeat;
+  position: relative;
+
+  h3 {
+    font-family: Dudka;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 100%;
+    display: flex;
+    justify-content: center;
+    color: #E950A0;
+    margin-bottom: 20px;
+  }
+
+  .sliderWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+    position: relative;
+  }
+
+  .sliderArea {
+    width: 100%;
+  }
+
+  .slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sponsorImage {
+    width: 130px !important;
+    height: 130px !important;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  .prevBtn,
+  .nextBtn {
+    background: transparent;
+    color: #FFFFFF;
+    font-size: 24px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid #E950A0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      background: #E950A0;
+      color: #fff;
+    }
+  }
+
+  .prevBtn {
+    margin-right: 10px;
+  }
+
+  .nextBtn {
+    margin-left: 10px;
+  }
+
+  @media (max-width: 1440px) {
+    width: 90%;
+    margin: 550px auto 0 auto; 
+  }
+
+  @media (max-width: 1024px) {
+    width: 90%;
+    margin: 500px auto 0 auto;
+    padding: 30px 30px 60px 30px;
+
+    h3 {
+      font-size: 36px;
+    }
+
+    .sponsorImage {
+      width: 100px !important;
+      height: 100px !important;
+    }
+
+    .prevBtn, .nextBtn {
+      width: 60px;  
+      height: 60px;
+      font-size: 20px;
+    }
+  }
+
+  @media (max-width: 550px) {
+    width: 95%;
+    margin: 420px auto 0 auto;
+    padding: 20px 15px 40px 15px;
+    h3 {
+      font-size: 28px;
+    }
+
+    .sponsorImage {
+      width: 77px !important;
+      height: 77px !important;
+    }
+
+    .prevBtn, .nextBtn {
+      width: 80px;
+      height: 50px;
+      font-size: 18px;
+    }
+  }
+
+  @media (max-width: 360px) {
+    h3 {
+      font-size: 24px;
+    }
+
+    .sponsorImage {
+      width: 80px !important;
+      height: 80px !important;
+    }
+
+    .prevBtn, .nextBtn {
+      width: 60px;
+      height: 30px;
+      font-size: 12px;
+    }
+  }
+}

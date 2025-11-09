@@ -1,0 +1,202 @@
+.overlay { 
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 12px;
+  position: relative;
+  min-width: 280px;
+  max-width: 90%;
+  h3 {
+    text-align: center;
+    font-family: Dudka;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+    color: #000;
+  }
+}
+
+.close {
+  border: none;
+  background: none;
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.form {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  .flex {
+    display: flex;
+    gap: 10px;
+
+    .column {
+      flex-direction: column;
+      display: flex;
+      gap: 4px;
+    }
+  }
+
+  label {
+    font-family: Dudka;
+    font-weight: 700;
+    font-size: 20px;
+    color: black;
+
+    span {
+      color: #980000;
+    }
+  }
+
+  input {
+    width: 270px;
+    height: 33px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #666;
+    outline: none;
+    font-size: 16px;
+  }
+
+  a {
+    font-family: Gotham Pro;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: underline;
+    color: #2348A3;
+  }
+
+  span {
+    font-family: Gotham Pro;
+    font-weight: 700;
+    font-size: 16px;
+    color: #980000;
+  }
+
+  .btn {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+
+    .fileButton {
+      width: 211px;
+      height: 41px;
+      padding: 10px 40px;
+      border-radius: 10px;
+      background: #2348A3;
+      font-family: Dudka;
+      font-size: 20px;
+      color: white;
+      cursor: pointer;
+      border: none;
+
+      &:hover {
+        background-color: #005bb5;
+      }
+    }
+  }
+}
+
+
+
+@media (max-width: 1440px) {
+  .modal {
+    padding: 32px 24px;
+    h3 { font-size: 22px; }
+  }
+
+  .form input {
+    width: 230px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .modal {
+    max-width: 600px;
+    padding: 28px 20px;
+  }
+
+  .form {
+    .flex {
+      gap: 8px;
+    }
+
+    input {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+
+  .modal {
+    width: 80%;
+    padding: 24px 16px;
+    h3 { font-size: 20px; }
+  }
+
+  .form {
+    gap: 12px;
+
+    .flex {
+      flex-direction: column;
+      gap: 10px;
+
+      .column {
+        width: 100%;
+      }
+    }
+
+    input {
+      width: 100%;
+      font-size: 15px;
+      height: 32px;
+    }
+
+    a, span {
+      font-size: 14px;
+    }
+
+    .btn .fileButton {
+font-size: 20px;
+      height: 40px;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .modal {
+    width: 80%;
+    padding: 18px 14px;
+    h3 { font-size: 18px; }
+
+  .form {
+    gap: 10px;
+    input {
+      font-size: 14px;
+      height: 30px;
+    }
+
+    .btn .fileButton {
+      font-size: 16px;
+      height: 36px;
+      padding: 8px;
+    }
+  }
+}
+}

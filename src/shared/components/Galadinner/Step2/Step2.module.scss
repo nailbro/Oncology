@@ -1,0 +1,94 @@
+.step {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h3 {
+    font-family: Dudka;
+    font-weight: 700;
+    font-size: 20px;
+    color: #2348A3;
+    line-height: 100%;
+    text-align: center;
+  }
+
+  .qrcode {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .btn {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+
+    .fileButton {
+      width: 211px;
+      height: 41px;
+      padding: 10px 40px;
+      border-radius: 10px;
+      background: #2348A3;
+      font-family: Dudka;
+      font-weight: 400;
+      font-size: 20px;
+      color: white;
+      cursor: pointer;
+      border: none;
+
+      &:hover {
+        background-color: #005bb5;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .step {
+    h3 {
+      font-size: 18px;
+    }
+
+    .btn .fileButton {
+      width: 180px;
+      height: 38px;
+      font-size: 18px;
+      padding: 8px 30px;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .step {
+    .btn {
+      flex-direction: column;
+      gap: 10px;
+
+      .fileButton {
+        width: 100%;
+        font-size: 16px;
+        height: 36px;
+        padding: 8px 20px;
+      }
+    }
+
+    h3 {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 280px) {
+  .step {
+    h3 {
+      font-size: 14px;
+    }
+
+    .btn .fileButton {
+      width: 100%;
+      font-size: 14px;
+      height: 32px;
+      padding: 6px 16px;
+    }
+  }
+}

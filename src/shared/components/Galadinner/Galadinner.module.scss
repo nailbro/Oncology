@@ -1,0 +1,176 @@
+.overlay { 
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 12px;
+  position: relative;
+  min-width: 280px;
+  max-width: 100%;
+  height: 412px;
+
+  h3 {
+    text-align: center;
+    font-family: Dudka;
+    font-weight: 700;
+    font-size: 24px;
+    color: #000;
+  }
+
+  label {
+    font-family: Dudka;
+    font-weight: 700;
+    font-size: 20px;
+    color: black;
+
+    span {
+      color: #980000;
+    }
+  }
+
+  input {
+    width: 270px;
+    height: 33px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #666;
+    outline: none;
+    font-size: 16px;
+  }
+
+  span {
+    font-family: Gotham Pro;
+    font-weight: 700;
+    font-size: 20px;
+    color: #071249;
+  }
+}
+
+.close {
+  border: none;
+  background: none;
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.imageContainer {
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  animation: fadeContent 0.3s ease;
+}
+
+.flex {
+  display: flex;
+  gap: 10px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+@keyframes fadeContent {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+@media (max-width: 1024px) {
+  .modal {
+    max-width: 90%;
+    padding: 30px 20px;
+    height: auto;
+
+  input {
+    width: 100%;
+  }
+
+  .flex {
+    gap: 8px;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  span {
+    font-size: 18px;
+  }
+}
+}
+
+@media (max-width: 550px) {
+  .modal {
+    width: 90%;
+    padding: 24px 16px;
+    height: auto;
+
+  .flex {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  input {
+    width: 100%;
+    font-size: 15px;
+    height: 32px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  span {
+    font-size: 16px;
+  }
+  button{
+    font-size: 36px;
+  }
+}
+}
+
+@media (max-width: 360px) {
+  .modal {
+    padding: 18px 12px;
+  h3 {
+    font-size: 18px;
+  }
+button{
+  font-size: 28px;
+}
+  input {
+    font-size: 14px;
+    height: 28px;
+  }
+
+  span {
+    font-size: 14px;
+  }
+}
+}

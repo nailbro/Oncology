@@ -1,0 +1,266 @@
+.maps,
+.mapsing {
+  margin: 44px auto 0 auto;
+  width: 100%;
+  max-width: 1320px;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+
+  .box {
+    background: url('/assets/Frame 449.jpg') no-repeat;
+    background-size: cover;
+    width: 36%;
+    min-width: 200px;
+    padding: 40px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    h4 {
+      font-family: Dudka;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 1.1;
+      color: white;
+    }
+
+    .text {
+      padding-top: 32px;
+
+      h4 {
+        font-family: Dudka;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 1.1;
+        letter-spacing: 4%;
+        color: #E950A0;
+      }
+
+      .contacts {
+        padding-top: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .tell,
+        .email,
+        .local {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          flex-wrap: wrap;
+
+          i {
+            color: white;
+          }
+
+          a {
+            text-decoration: none;
+
+            span {
+              font-family: Dudka;
+              font-weight: 400;
+              font-size: 20px;
+              line-height: 1.1;
+              color: white;
+            }
+          }
+
+          span {
+            font-family: Dudka;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 1.1;
+            color: white;
+          }
+        }
+
+        .mesange {
+          display: flex;
+          gap: 24px;
+
+          i {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+
+  .mapContainer {
+    width: 60%;
+    min-width: 250px;
+    max-width: 802px;
+    height: auto;
+    aspect-ratio: 16/9;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 20px;
+    }
+
+    .mapLink {
+      display: block;
+      margin-top: 10px;
+      text-align: center;
+      color: #e950a0;
+      font-weight: 700;
+      text-decoration: none;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .maps,
+  .mapsing {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+
+    .box {
+      order: 1;
+      width: 90%;
+      padding: 25px;
+
+      h4 {
+        font-size: 28px;
+        line-height: 1.2;
+      }
+
+      .text h4 {
+        font-size: 24px;
+      }
+
+      .contacts span {
+        font-size: 16px;
+      }
+
+      .contacts i {
+        font-size: 18px;
+      }
+    }
+
+    .mapContainer {
+      order: 2;
+      width: 90%;
+      aspect-ratio: 16/9;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .maps{
+    gap: 20px;
+
+    .box {
+      width: 95%;
+      padding: 15px;
+
+      h4 {
+        font-size: 24px;
+      }
+
+      .text h4 {
+        font-size: 20px;
+      }
+
+      .contacts span {
+        font-size: 14px;
+      }
+
+      .contacts i {
+        font-size: 16px;
+      }
+
+      .contacts .mesange i {
+        font-size: 18px;
+      }
+    }
+
+    .mapContainer {
+      margin-top: 20px;
+      width: 95%;
+      height: 300px;
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .maps,
+  .mapsing {
+    gap: 10px;
+
+    .box {
+      padding: 10px;
+
+      h4 {
+        font-size: 18px;
+      }
+
+      .text h4 {
+        font-size: 16px;
+      }
+
+      .contacts span {
+        font-size: 12px;
+      }
+
+      .contacts i {
+        font-size: 14px;
+      }
+
+      .contacts .mesange i {
+        font-size: 16px;
+      }
+    }
+
+    .mapContainer {
+      width: 100%;
+      height: 150px;
+    }
+  }
+}
+
+@media (max-width: 300px) {
+  .maps,
+  .mapsing {
+    gap: 5px;
+
+    .box {
+      padding: 8px;
+
+      h4 {
+        font-size: 16px;
+      }
+
+      .text h4 {
+        font-size: 14px;
+      }
+
+      .contacts span {
+        font-size: 10px;
+      }
+
+      .contacts i {
+        font-size: 12px;
+      }
+
+      .contacts .mesange i {
+        font-size: 14px;
+      }
+    }
+
+    .mapContainer {
+      width: 100%;
+      height: 120px;
+    }
+  }
+}

@@ -1,0 +1,391 @@
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 714px;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #00000080;
+    z-index: 1;
+  }
+
+  .videoBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: center;
+    z-index: 0;
+    transition: transform 0.3s ease, filter 0.3s ease;
+
+    @media (max-width: 768px) {
+      object-position: center top;
+    }
+
+    @media (max-width: 550px) {
+    object-fit: cover; 
+    object-position: center;
+    }
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+    padding-top: 87px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    h1 {
+      padding-top: 87px;
+      color: #fff;
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 100%;
+
+      &::first-line {
+        color: #e950a0;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 36px;
+        line-height: 110%;
+        padding-top: 60px;
+      }
+
+      @media (max-width: 550px) {
+        font-size: 28px;
+        padding-top: 40px;
+        padding-inline: 10px;
+      }
+    }
+
+    p {
+      padding-top: 16px;
+      color: #fff;
+      font-family: Dudka;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 100%;
+
+      @media (max-width: 768px) {
+        font-size: 18px;
+      }
+
+      @media (max-width: 550px) {
+        font-size: 16px;
+        padding-inline: 10px;
+      }
+    }
+
+    .bishkek {
+      display: flex;
+      justify-content: center;
+      padding-top: 16px;
+
+      @media (max-width: 550px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .column {
+        flex-direction: column;
+
+        .days {
+          font-family: Dudka;
+          font-weight: 700;
+          font-size: 48px;
+          color: #fff;
+
+          @media (max-width: 768px) {
+            font-size: 36px;
+          }
+
+          @media (max-width: 550px) {
+            font-size: 28px;
+          }
+        }
+
+        .month_row {
+          padding-top: 4px;
+          font-family: Dudka;
+          font-size: 20px;
+          color: #fff;
+
+          @media (max-width: 550px) {
+            font-size: 16px;
+          }
+        }
+      }
+
+      .city {
+        padding-left: 20px;
+        font-family: Dudka;
+        font-weight: 100;
+        font-size: 20px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+
+        @media (max-width: 550px) {
+          padding-left: 0;
+          font-size: 16px;
+        }
+      }
+    }
+
+    .btn {
+      padding-top: 16px;
+      button {
+        width: 304px;
+        height: 65px;
+        border-radius: 10px;
+              cursor: pointer;
+        background: #2348a3;
+        border: none;
+        font-family: Dudka;
+        font-size: 24px;
+        color: #fff;
+
+        @media (max-width: 768px) {
+          width: 240px;
+          height: 55px;
+          font-size: 20px;
+        }
+
+        @media (max-width: 550px) {
+          width: 200px;
+          height: 50px;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+.Gynecology {
+right: 7%;
+  position: absolute;
+  z-index: 10;
+  top: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  @media (max-width: 1024px) {
+    right: 3%;
+  }
+
+  @media (max-width: 768px) {
+    right: 2%;
+  }
+
+  @media (max-width: 550px) {
+    
+  }
+
+  .boxWrapper {
+    position: relative;
+    width: 271px;
+    border: 1px solid #2348a3;
+    border-radius: 30px;
+    background: #fff;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    &.open {
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+      .innerBox {
+        max-height: 200px;
+        opacity: 1;
+        padding: 15px 10px;
+      }
+    }
+
+    @media (max-width: 550px) {
+      width: 90%;
+    }
+  }
+.gyneButton {
+    width: 100%;
+    height: 61px;
+    background: #fff;
+    color: #2348a3;
+    font-family: Dudka;
+    font-weight: 700;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+
+    @media (max-width: 550px) {
+      font-size: 18px;
+      height: 55px;
+    }
+
+    &:hover {
+      background: #2348a3;
+      color: #fff;
+    }
+  }
+
+  .innerBox {
+    width: 100%;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+
+    .box {
+      margin-bottom: 8px;
+
+      span {
+        font-family: Dudka;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 100%;
+        color: black;
+
+        .label {
+          color: #2348a3;
+        }
+
+        @media (max-width: 550px) {
+          font-size: 16px;
+        }
+      }
+    }
+
+    .btn_2 {
+      padding-top: 10px;
+      display: flex;
+      justify-content: center;
+
+      button {
+        width: 140px;
+        height: 40px;
+        border-radius: 10px;
+        border: none;
+        font-family: Dudka;
+        font-size: 16px;
+        background: #2348a3;
+        color: white;
+        cursor: pointer;
+
+        @media (max-width: 550px) {
+          width: 120px;
+          height: 36px;
+          font-size: 14px;
+        }
+
+        &:hover {
+          background: #1d3b8a;
+        }
+      }
+    }
+  }
+}
+}
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal {
+  background: white;
+  width: 720px;
+  padding: 105px 184px;
+  border-radius: 12px;
+  position: relative;
+  min-width: 300px;
+  transition: 0.3s ease;
+}
+
+.close {
+  border: none;
+  background: none;
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.item {
+  width: 352px;
+  height: 61px;
+  gap: 10px;
+  background: #2348A3;
+  padding: 14px;
+  border-radius: 8px;
+  color: #fff;
+  font-family: Dudka;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 20px;
+  line-height: 100%;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+
+@media (max-width: 1024px) {
+  .modal {
+  width: 80%;
+    padding: 70px 80px;
+  height: 300px;
+    .item {
+    width: 100%;
+    height: 52px;
+    font-size: 16px;
+  }
+}
+}
+@media (max-width: 550px) {
+  .modal {
+    width: 90%;
+    padding: 40px 40px;
+
+  .close {
+    top: 10px;
+    right: 10px;
+    font-size: 32px;
+  }
+
+  .item {
+    width: 100%;
+    height: 52px;
+    font-size: 16px;
+  }
+}
+}
+@media (max-width: 320px) {
+  .modal {
+    width: 80%;
+    padding: 32px 16px;
+  .close {
+    font-size: 28px;
+  }
+
+  .item {
+    margin-top: 20px;
+    width: 100%;
+    height: 48px;
+    font-size: 15px;
+  }
+}
+}
