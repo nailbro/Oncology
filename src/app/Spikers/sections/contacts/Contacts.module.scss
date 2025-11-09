@@ -1,0 +1,74 @@
+.contacts {
+  margin-left: 37px;
+  margin-top: 800px;
+  position: absolute;
+  width: 508px;
+  height: 398px;
+  border-radius: 5px;
+  border-width: 1px;
+  border-style: dashed;
+
+  form {
+    padding-top: 20px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    label {
+      font-family: Dudka;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 100%;
+      color: #000000;
+
+      span {
+        font-family: Dudka;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 100%;
+        color: #980000;
+      }
+    }
+
+    .fio {
+      width: 270px;
+      height: 33px;
+      border: 1px solid #666666;
+      border-radius: 10px;
+      padding: 10px;
+      outline: none;
+    }
+
+    .file {
+      font-family: Dudka;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 100%;
+      color: #000000;
+
+      &::file-selector-button {
+        background: #b7b7b7;
+        width: 171px;
+        height: 44px;
+        border: 1px solid #000000;
+        padding: 10px;
+        cursor: pointer;
+      }
+
+      &:focus-within {
+        outline: none;
+        color: #980000;
+      }
+    }
+
+    .preview {
+      width: 295px;
+      height: 396px;
+      object-fit: cover;   
+      border: 1px solid #666;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+  }
+}

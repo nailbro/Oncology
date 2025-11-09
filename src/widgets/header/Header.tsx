@@ -5,6 +5,7 @@ import styles from './header.module.scss';
 import mask from '@/../public/assets/Mask group 1.svg';
 import profile from '@/../public/icons/profile.svg';
 import SingIn from '@/shared/components/SingIn/SingIn';
+import Link from 'next/link';
 
 export default function Header() {
   const [isSigninOpen, setIsSigninOpen] = useState(false);
@@ -25,7 +26,9 @@ export default function Header() {
             <a href="#1">
             <li>О конференции</li>
             </a>
+            <Link href="/Spikers">
             <li>Спикеры</li>
+            </Link>
             <li>Партнёры</li>
             <a href="#4">
             <li>Контакты</li>
