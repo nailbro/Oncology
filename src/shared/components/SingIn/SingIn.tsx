@@ -4,6 +4,7 @@ import { useState } from "react";
 import { MdOutlineRemoveRedEye } from "react-icons/md";
 import { AiOutlineEyeInvisible } from "react-icons/ai";
 import styles from "./SingIn.module.scss";
+import Link from "next/link";
 
 export default function SingIn() {
   const [showPassword, setShowPassword] = useState(false);
@@ -31,7 +32,9 @@ export default function SingIn() {
           </div>
 
           <div className={styles.btn}>
+            <Link href="/Questionnaires">
             <button>Войти</button>
+            </Link>
           </div>
         </form>
       </div>

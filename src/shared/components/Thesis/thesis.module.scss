@@ -73,30 +73,39 @@
     font-size: 16px;
   }
 
-  a {
+
+.requirements{
+  a{
     font-family: Gotham Pro;
-    font-weight: 700;
-    font-size: 16px;
-    text-decoration: underline;
-    color: #2348A3;
+font-weight: 700;
+font-style: Bold;
+font-size: 16px;
+line-height: 100%;
+letter-spacing: 4%;
+text-decoration: underline;
+text-decoration-style: solid;
+text-decoration-thickness: 15.5%;
+text-decoration-skip-ink: auto;
+color: #2348A3;
   }
-
-  span {
+}
+.Reception{
+  span{
     font-family: Gotham Pro;
-    font-weight: 700;
-    font-size: 16px;
-    color: #980000;
+font-weight: 700;
+font-style: Bold;
+font-size: 16px;
+line-height: 100%;
+color: #980000;
   }
-
-  .btn {
-    padding-top: 20px;
-    display: flex;
-    justify-content: center;
-
+}
+.center{
+  display: flex;
+  justify-content: center;
+}
     .fileButton {
       width: 211px;
       height: 41px;
-      padding: 10px 40px;
       border-radius: 10px;
       background: #2348A3;
       font-family: Dudka;
@@ -104,15 +113,41 @@
       color: white;
       cursor: pointer;
       border: none;
-
       &:hover {
         background-color: #005bb5;
       }
     }
-  }
+.thesis{
+padding-top: 5px;
+padding-right: 40px;
+padding-bottom: 5px;
+padding-left: 40px;
+  margin-top: 10px;
+background: #C8D8FF;
+font-family: Inter;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+line-height: 100%;
+letter-spacing: 4%;
+color: black;
 }
-
-
+      .submitButton{
+        margin-top: 10px;
+      border-radius: 10px;
+      width: 182px;
+      height: 41px;
+      font-family: Dudka;
+font-weight: 400;
+font-style: Regular;
+font-size: 20px;
+line-height: 100%;
+color: white;
+      cursor: pointer;
+      border: none;
+      background: #2348A3;
+    }
+}
 
 @media (max-width: 1440px) {
   .modal {

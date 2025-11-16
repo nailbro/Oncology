@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-  ],
+, "backend/src/routes/user.routes.ts"  ],
   "exclude": ["node_modules"]
 }

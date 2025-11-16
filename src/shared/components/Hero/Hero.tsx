@@ -3,8 +3,8 @@ import { useState } from "react";
 import styles from "./Hero.module.scss";
 import Modal from "./Modal";
 import BecomeModal from "../Become/Become";
-import Thesis from "../Thesis/Thesis";
 import Galadinner from "../Galadinner/Galadinner";
+import Thesis from "../Thesis/Thesis";
 
 export default function Hero() {
   const [isOpen, setIsOpen] = useState(false);    

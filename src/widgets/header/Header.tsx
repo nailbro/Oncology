@@ -57,7 +57,10 @@ export default function Header() {
                 <a href="#1">
                 <li onClick={closeBurger}>О конференции</li>
                 </a>
-                <li onClick={closeBurger}>Спикеры</li>
+                  <Link href="/Spikers">
+                   <li onClick={closeBurger}>Спикеры</li>
+            </Link>
+         
                 <li onClick={closeBurger}>Партнёры</li>
                 <a href="#4">
                 <li onClick={closeBurger}>Контакты</li>

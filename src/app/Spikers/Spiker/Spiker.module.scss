@@ -1,0 +1,145 @@
+.spiker {
+  margin-top: 203px;
+  position: relative;
+  width: 100%;
+  max-width: 1280px;
+  padding: 0 20px;
+  margin-left: auto;
+  margin-right: auto;
+  user-select: none;
+
+  .container {
+    width: 100%;
+
+    .top {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 32px;
+
+      h3 {
+        font-family: Dudka, sans-serif;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 1.2;
+        color: #000;
+        span {
+          color: #036AB4;
+        }
+      }
+
+      .arrows {
+        display: flex;
+        gap: 12px;
+      }
+
+      .btn, .btn2 {
+        width: 50px;
+        height: 35px;
+        border-radius: 50px;
+        border: 1px solid #036ab4;
+        background: white;
+        color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover, &.active {
+          opacity: 0.5;
+        }
+      }
+    }
+
+    .boxs {
+      display: flex;
+      column-gap: 24px;
+      row-gap: 24px;
+
+      .box {
+        width: 100%;
+        max-width: 295px;
+        flex-shrink: 0;
+
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: 10px;
+        }
+
+        .text {
+          padding-top: 12px;
+
+          h4 {
+            font-family: Dudka, sans-serif;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 1.2;
+            color: black;
+          }
+
+          p {
+            padding-top: 6px;
+            font-family: Dudka, sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.2;
+            color: black;
+          }
+
+          span {
+            display: block;
+            padding-top: 6px;
+            font-family: Dudka, sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 1.2;
+            color: black;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .top h3 {
+      font-size: 36px;
+    }
+
+    .boxs .box {
+      max-width: 220px;
+    }
+  }
+
+  @media (max-width: 550px) {
+    .top {
+      margin-top: -50px;
+      flex-direction: column;
+      align-items: flex-start;
+
+      .arrows {
+        margin-top: 16px;
+      }
+
+      h3 {
+        font-size: 28px;
+      }
+    }
+
+    .boxs {
+      column-gap: 10px;
+
+      .box {
+        max-width: 160px;
+
+        .text {
+          h4 { font-size: 16px; }
+          p { font-size: 12px; }
+          span { font-size: 10px; }
+        }
+      }
+    }
+  }
+}

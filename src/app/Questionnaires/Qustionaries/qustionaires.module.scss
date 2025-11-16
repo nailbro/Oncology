@@ -1,0 +1,74 @@
+.qustionaires {
+  position: relative;
+  margin: 100px auto 0 auto;
+  width: 1318px;
+
+  .container {
+    width: 1318px;
+    height: 43px;
+    display: flex;
+    gap: 24px;
+    border-bottom-width: 1px;
+
+    h4 {
+      cursor: pointer;
+      font-family: Gotham Pro;
+      font-weight: 700;
+      font-style: Bold;
+      font-size: 24px;
+      line-height: 100%;
+      color: #666666;
+
+      &.active {
+        color: #2348A3;
+        border-bottom: 3px solid #2348A3;
+      }
+    }
+  }
+
+  .diviler {
+    width: 1318px;
+    border-bottom: 1px solid #666666;
+  }
+
+  @media (max-width: 1024px) {
+    width: 90%;
+    margin: 100px auto 0 auto;
+
+    .container {
+      width: 100%;
+      gap: 16px;
+      height: 36px;
+
+      h4 {
+        font-size: 20px;
+      }
+    }
+
+    .diviler {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 550px) {
+    .qustionaires{
+    width: 95%;
+    margin: 0 auto;
+
+    .container {
+        display: flex;
+      flex-direction: column;
+      gap: 12px;
+      height: auto;
+
+      h4 {
+        font-size: 18px;
+      }
+    }
+
+    .diviler {
+      width: 100%;
+    }
+  }
+}
+}
