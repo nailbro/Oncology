@@ -29,26 +29,11 @@ async function startServer() {
       next();
     });
 
-    const allowedOrigins = [
-      process.env.FRONTEND_URL_LOCAL,
-      process.env.FRONTEND_URL_RENDER,
-      process.env.FRONTEND_URL_VERCEL,
-      "http://localhost:3000",
-      "http://localhost:3001",
-    ].filter(Boolean);
-
     app.use(cors({
-      origin: (origin, callback) => {
-        if (!origin || allowedOrigins.includes(origin)) {
-          callback(null, true);
-        } else {
-          console.warn("CORS blocked:", origin);
-          callback(new Error("Not allowed by CORS"));
-        }
-      },
+      origin: true, 
       credentials: true,
       methods: ["GET", "POST", "PATCH", "PUT", "DELETE", "OPTIONS"],
-      allowedHeaders: ["Origin", "X-Requested-With", "Content-Type", "Accept"]
+      allowedHeaders: ["Origin", "X-Requested-With", "Content-Type", "Accept", "Authorization"]
     }));
 
     app.use(express.json({ limit: "10mb" }));
@@ -69,6 +54,8 @@ async function startServer() {
         endpoints: {
           participants: "/api/step",
           mail: "/api/mail/send",
+          auth: "/api/auth/login",
+          users: "/api/users"
         }
       });
     });
@@ -92,6 +79,7 @@ async function startServer() {
       console.log(`🌐 FRONTEND_URL_RENDER: ${process.env.FRONTEND_URL_RENDER}`);
       console.log(`🌐 FRONTEND_URL_VERCEL: ${process.env.FRONTEND_URL_VERCEL}`);
       console.log(`📋 Participants endpoint: http://localhost:${PORT}/api/step`);
+      console.log(`✅ CORS enabled for all origins`);
     });
 
   } catch (err) {

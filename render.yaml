@@ -1,0 +1,51 @@
+services:
+  - type: web
+    name: oncology-backend
+    env: node
+    region: oregon
+    plan: free
+    
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && npm start
+    
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5000
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: MONGODB_URI
+        sync: false
+      - key: SMTP_HOST
+        sync: false
+      - key: SMTP_PORT
+        sync: false
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASSWORD
+        sync: false
+      - key: SMTP_FROM
+        sync: false
+
+  - type: web
+    name: oncology-frontend
+    env: node
+    region: oregon
+    plan: free
+    
+    buildCommand: cd frontend && npm install && npm run build
+    startCommand: cd frontend && npm start
+    
+    envVars:
+      - key: NEXT_PUBLIC_API_URL
+        value: https://oncology-backend.onrender.com
+    
+    routes:
+      - type: http
+        source: /
+        destination: /
