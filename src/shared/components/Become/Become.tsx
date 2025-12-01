@@ -53,7 +53,7 @@ export default function BecomeModal({
           value.length === 0
             ? "Номер телефона обязателен"
             : !phoneRegex.test(value)
-            ? "Номер должен начинаться с +996 или 0 и быть корректным"
+            ? "Номер должен начинаться с +996 или 0"
             : undefined,
       }));
     }
@@ -66,7 +66,7 @@ export default function BecomeModal({
     const newErrors: typeof errors = {};
     if (nameParts.length !== 3) newErrors.name = "Введите Фамилию, Имя и Отчество";
     if (!phoneRegex.test(formData.phone))
-      newErrors.phone = "Телефон должен начинаться с +996 или 0 и быть корректным";
+      newErrors.phone = "+996 или 0";
 
     setErrors(newErrors);
 
@@ -162,6 +162,7 @@ export default function BecomeModal({
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
+                      placeholder="+996 или 0"
                 required
               />
               {errors.phone && <p className={styles.error}>{errors.phone}</p>}

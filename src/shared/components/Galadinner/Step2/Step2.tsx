@@ -3,7 +3,7 @@
 import { useRef, useState } from 'react';
 import Image from 'next/image';
 import styles from './Step2.module.scss';
-import qrcode from '@/../public/assets/QR Code.svg';
+import qrcode from '@/../public/assets/photo_2025-12-01_14-11-08.jpg';
 
 interface Step2Props {
   onSubmit: (file: File) => void;

@@ -83,7 +83,9 @@ export default function Hero() {
               </span>
             </div>
             <div className={styles.btn_2}>
+              <a href="">
               <button>Узнать больше</button>
+              </a>
             </div>
           </div>
         </div>

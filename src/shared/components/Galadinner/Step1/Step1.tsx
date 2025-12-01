@@ -94,7 +94,6 @@ export default function Step1({ onSubmit }: Step1Props) {
               required
               value={formData.name}
               onChange={handleChange}
-              placeholder="Иванов Иван Иванович"
             />
             {errors.name && <p className={styles.error}>{errors.name}</p>}
           </div>
@@ -109,7 +108,6 @@ export default function Step1({ onSubmit }: Step1Props) {
               required
               value={formData.email}
               onChange={handleChange}
-              placeholder="example@mail.com"
             />
           </div>
         </div>

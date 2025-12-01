@@ -1,4 +1,3 @@
-// src/models/thesis.model.ts
 import mongoose, { Schema, Document, Model } from "mongoose";
 
 export interface IThesis extends Document {
@@ -16,7 +15,7 @@ const thesisSchema: Schema<IThesis> = new Schema(
     email: { type: String, required: true },
     company: { type: String, required: true },
     phone: { type: String, required: true },
-    doc: { type: String, required: true }, // имя файла
+    doc: { type: String, required: true }, 
   },
   { timestamps: true }
 );

@@ -6,11 +6,9 @@ import Thesis from "../models/thesis.model";
 
 const router = express.Router();
 
-// Папка для загрузки файлов
 const uploadDir = path.join(process.cwd(), "uploads");
 if (!fs.existsSync(uploadDir)) fs.mkdirSync(uploadDir, { recursive: true });
 
-// Multer настройка
 const storage = multer.diskStorage({
   destination: (_req, _file, cb) => cb(null, uploadDir),
   filename: (_req, file, cb) => {
@@ -31,7 +29,6 @@ const upload = multer({
   },
 });
 
-// POST /api/thesis
 router.post("/", upload.single("file"), async (req, res) => {
   try {
     const { name, email, company, phone } = req.body;
@@ -53,7 +50,6 @@ router.post("/", upload.single("file"), async (req, res) => {
   }
 });
 
-// GET /api/thesis
 router.get("/", async (_req, res) => {
   try {
     const theses = await Thesis.find().sort({ createdAt: -1 });

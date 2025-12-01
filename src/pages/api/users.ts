@@ -27,8 +27,27 @@ export default async function handler(
       console.error("Network Error:", error);
       return res.status(500).json({ message: "Серверная ошибка. Попробуйте позже" });
     }
-  } else {
-    res.setHeader("Allow", ["POST"]);
+  } 
+  else if (req.method === "GET") {
+    try {
+      const response = await fetch("http://localhost:5000/api/users", {
+        method: "GET",
+        headers: { "Content-Type": "application/json" },
+      });
+
+      if (!response.ok) {
+        return res.status(response.status).json({ message: "Ошибка при загрузке пользователей" });
+      }
+
+      const data = await response.json();
+      return res.status(200).json(data);
+    } catch (error) {
+      console.error("Network Error:", error);
+      return res.status(500).json({ message: "Серверная ошибка. Попробуйте позже" });
+    }
+  }
+  else {
+    res.setHeader("Allow", ["GET", "POST"]);
     return res.status(405).json({ message: `Метод ${req.method} не разрешен` });
   }
 }

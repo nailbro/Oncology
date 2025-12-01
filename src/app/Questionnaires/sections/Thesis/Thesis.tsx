@@ -21,11 +21,11 @@ export default function Thesis() {
   const [participants, setParticipants] = useState<Participant[]>([]);
   const [loading, setLoading] = useState(true);
 
-  const SERVER = process.env.NEXT_PUBLIC_BACKEND_URL!;  // <-- ТУТ ПРАВИЛЬНО
+  const SERVER = process.env.NEXT_PUBLIC_BACKEND_URL!; 
 
   const fetchParticipants = async () => {
     try {
-      const res = await fetch(`${SERVER}/api/thesis`); // <-- ИСПРАВЛЕНО
+      const res = await fetch(`${SERVER}/api/thesis`);
       const data = await res.json();
       setParticipants(data);
     } catch (err) {

@@ -30,14 +30,21 @@ export default function Maps() {
 
             <div className={styles.local}>
               <i><FiMapPin size={20} /></i>
+              <a href="https://go.2gis.com/zqFaU">
               <span>
                 Национальный центр онкологии и гематологии, г. Бишкек
               </span>
+              </a>
             </div>
 
             <div className={styles.mesange}>
+      
+              <a href="https://www.whatsapp.com/?lang=ru">
               <i><FaWhatsapp size={24} /></i>
+              </a>
+                      <a href="https://www.instagram.com/">
               <i><FaInstagram size={24} /></i>
+              </a>
             </div>
           </div>
         </div>

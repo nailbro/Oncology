@@ -19,8 +19,6 @@ interface Participant {
 export default function FormParcipants() {
   const [participants, setParticipants] = useState<Participant[]>([]);
   const [loading, setLoading] = useState(true);
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
   const SERVER = process.env.NEXT_PUBLIC_BACKEND_URL!;
 
   useEffect(() => {
@@ -115,33 +113,7 @@ export default function FormParcipants() {
               </div>
             </div>
 
-            <div className={styles.tabletMobileList}>
-              {group.map((p, i) => (
-                <div key={i} className={styles.mobileItem}>
-                  <div
-                    className={styles.mobileHeader}
-                    onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                  >
-                    <span className={styles.mobileTitle}>Имя</span>
-                    <span className={styles.mobileName}>{p.name}</span>
 
-                    <IoIosArrowDown
-                      className={`${styles.arrow} ${
-                        openIndex === i ? styles.arrowOpen : ''
-                      }`}
-                    />
-                  </div>
-
-                  {openIndex === i && (
-                    <div className={styles.mobileContent}>
-                      <p><b>Email:</b> {p.email}</p>
-                      <p><b>Компания:</b> {p.company}</p>
-                      <p><b>Телефон:</b> {p.phone}</p>
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
           </SwiperSlide>
         ))}
 

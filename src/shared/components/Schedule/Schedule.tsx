@@ -16,6 +16,11 @@ export default function Schedule(){
     <div className={styles.flex}>
 <Image src={node} alt='node'/>
     <h4>Программа конференции</h4>
+    <div className={styles.btn}>
+     <a href="">
+        <button>скачать</button>
+        </a>
+    </div>
     </div>
     <div className={styles.diviler}></div>
 </div>
@@ -23,6 +28,11 @@ export default function Schedule(){
     <div className={styles.flex}>
     <Image src={clock} alt='clock'/>
     <h4>Расписание</h4>
+    <div className={styles.btn}>
+        <a href="">
+        <button>скачать</button>
+        </a>
+    </div>
     </div>
     <div className={styles.diviler}></div>
 </div>
@@ -30,6 +40,11 @@ export default function Schedule(){
        <div className={styles.flex}>
     <Image src={gallery} alt='gallery'/>
     <h4>Выставка</h4>
+       <div className={styles.btn}>
+        <a href="">
+        <button>скачать</button>
+        </a>
+    </div>
     </div>
     <div className={styles.diviler}></div>
 </div>

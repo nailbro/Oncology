@@ -28,7 +28,7 @@ export default function Thesis({ open, onClose, onSuccess }: ThesisProps) {
 
     if (name === 'phone') {
       const phoneRegex = /^(\+996\d{9}|0\d{9})$/;
-      setErrors(prev => ({ ...prev, phone: phoneRegex.test(value) || !value ? '' : 'Номер должен начинаться с +996 или 0 и содержать 10 цифр' }));
+      setErrors(prev => ({ ...prev, phone: phoneRegex.test(value) || !value ? '' : 'Номер должен начинаться с +996 или 0' }));
     }
 
     setFormData(prev => ({ ...prev, [name]: value }));
@@ -128,7 +128,7 @@ export default function Thesis({ open, onClose, onSuccess }: ThesisProps) {
             </div>
           </div>
 <div className={styles.requirements}>
-  <a href="https://youtu.be/dQw4w9WgXcQ?si=sIdOO-cNtAxgF3un">Требования к оформлению тезиса</a>
+  <a  href="/assets/thesisRequire.docx">Требования к оформлению тезиса</a>
 </div>
 <div className={styles.Reception}>
   <span>Прием тезисов: до 15 июля 2025 года.</span>

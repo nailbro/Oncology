@@ -310,3 +310,25 @@ font-weight: bold;
 
   .customPrev { left: 44%; }   
   .customNext { right: 44%; }
+  .confirmButton {
+  margin-left: 10px;
+  padding: 4px 10px;
+  background: #2e89ff;
+  color: white;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  transition: 0.2s;
+}
+
+.confirmButton:hover {
+  background: #1c67c9;
+}
+
+.confirmedLabel {
+  margin-left: 10px;
+  color: #28a745;
+  font-weight: bold;
+  font-size: 12px;
+}

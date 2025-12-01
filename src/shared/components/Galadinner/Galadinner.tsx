@@ -24,15 +24,13 @@ export default function Galadinner({
 
   if (!open) return null;
 
-  const currentImage = currentStep === 1 ? step1Icon : step2Icon;
-
-  // ✅ Переход к Step2
-  const handleStep1Submit = (data: any) => {
+const currentImage = currentStep === 1 ? step1Icon : step2Icon;
+const handleStep1Submit = (data: any) => {
     setFormData(data);
     setCurrentStep(2);
   };
 
-  // ✅ Отправка формы Step2
+
   const handleStep2Submit = async (selectedFile: File) => {
     setFile(selectedFile);
     setSubmitting(true);
@@ -45,7 +43,7 @@ export default function Galadinner({
     form.append('paymentFile', selectedFile);
 
     try {
-      const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:5000';
+      const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
       const res = await fetch(`${BACKEND_URL}/api/step`, {
         method: 'POST',
         body: form,
